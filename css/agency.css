@@ -1,0 +1,596 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FFF;
+    font-family: Myriad;
+    width: 100vw;
+    height: 100vh;
+}
+
+nav{
+    background-color: transparent;
+    min-width: 550px;
+    width: 90%;
+    height: 10%;
+    margin: 5% 5% 0 5%;
+    display: flex;
+    justify-content:space-between;
+    align-content: center;
+    color: white;
+    float: left;
+}
+
+.headLeft{
+    background-color: transparent;
+    width: 10%;
+    height: 50%;
+    margin-left: 3%;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-content: center;
+    cursor: pointer;
+}
+
+.pagMain{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.headRight{
+    width: 32%;
+    height: 100%;
+    margin-right: 5%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.headRight li{
+    height: 40%;
+    display: inline-block;
+    text-decoration: none;
+    align-self:flex-start;
+    cursor: pointer;
+    font-size: 1.6rem;
+    transition: 1s;
+    color:#4b4b4b;
+}
+
+.headRight li:hover{
+    transform:scale(1.2);
+}
+
+a{
+    text-decoration: none;
+    color: #4b4b4b;
+}
+
+.main{
+    background-color: transparent;
+    width: 95%;
+    height: 79.2%;
+    margin-left: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:left;
+    align-items: center;
+    color: black;
+    float:left;
+}
+
+.asideColorBlack{
+    width: 50%;
+    height: 85%;
+    color: #4b4b4b;
+    margin-left: 5%;
+}
+
+.color01{
+    color: #4b4b4b;
+}
+.letterBig{
+    font-size: 5.2vw;
+    line-height: 100%;
+}
+
+.letterMidle{
+    width: 80%;
+    font-size: 1.3vw;
+    margin-top: 5%;
+    text-align:justify;
+}
+
+.asideRight01{
+    background-color: transparent;
+    position: relative;
+    background-image: url('../img/fabiconMin.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40%;
+    height: 75%;
+    margin-top: 6%;
+    animation-name: creativoUp;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: linear;
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+@keyframes creativoUp {
+    0% {left: 0px; bottom: 0px;}
+    25% {left: 0px; bottom: 2vh}
+    50% {left: 0px; bottom: 4vh}
+    75% {left : 0px; bottom: 6vh}
+    100% {left: 0px; bottom: 8vh}
+}
+
+.infCard{
+    background-color: #367fff;
+    width: 30%;
+    height: 25%;
+    margin-left: 60%;
+    animation-name: textInf;
+    animation-duration : 3s;
+    animation-delay: 2s;
+    animation-iteration-count:infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in;  
+    border-radius: 50%; 
+}
+
+.infCard p{
+    font-size: 4vw;
+    color: white;
+    margin: 20% 10% 0 10%;
+}
+
+@keyframes textInf{
+    0% {filter:opacity(0)}
+    25% {filter:opacity(0.3)}
+    50% {filter: opacity(0.5);}
+    75% {filter: opacity(0.8)}
+    100% {filter: opacity(1)}
+}
+
+
+.modal{
+    position: relative;
+    background-color: rgba(255, 255, 255,0.7);
+    width: 100vw;
+    height: 100vh;
+    margin-top: -100vh;
+    transform: rotateY(90deg);
+    transition: 2s;
+    transform-origin: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    float: left;
+}
+
+.leftModal{
+    background-image: url('../img/fondoModal.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transform-origin: right;
+    width: 30%;
+    transition: 2s;
+    height: 70%;
+    box-shadow: 0 0 10px #4b4b4b;
+    float: left;
+}
+
+.rightModal{
+    background-color: rgba(255, 255, 255, 1);
+    width: 30%;
+    height: 70%;
+    transition: 2s;
+    transform-origin: left;
+    box-shadow: 0 0 5px #4b4b4b;
+}
+
+.rightModal p:nth-child(1){
+    width: 70%;
+    text-align: center;
+    color: #367fff;
+    margin-top: 5%;
+    font-size: 1.4vw;
+    float: left;
+}
+
+.rightModal button{
+    width: 10%;
+    color:#4b4b4b;
+    margin-top: 5%;
+    box-shadow: 0 0 10px black;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    float: left;
+}
+
+.rightModal p{
+    text-align: center;
+    color: #4b4b4b;
+    margin: 10% 10% 2% 10%;
+    font-size: 1vw;
+    text-align: justify;
+}
+
+form{
+    width: 80%;
+    height: 60%;
+    margin: 15% 10% 4% 10%;
+    background-color: transparent;
+}
+
+.conInput{
+    width: 100%;
+    height: 15%;
+    margin-bottom: 5%;
+    background-color:#367FFF
+}
+
+input{
+    background-color: rgba(255, 255, 255, 1);
+    width: 96%;
+    height: 80%;
+    margin-left: 2%;
+    margin-top: 2%;
+    border: none;
+    box-shadow: 2px 2px 1px black;
+    color: #4b4b4b;
+    font-size: 1.3vw;
+}
+
+::placeholder{
+    color: #4b4b4b;
+    padding: 6px;
+    font-size: 1.3vw;
+}
+
+::-moz-placeholder{
+    color: #4b4b4b;
+    padding: 8px;
+    font-size: 1.3vw;
+}
+
+::-webkit-input-placeholder{
+    color: #4b4b4b;
+    padding: 8px;
+    font-size: 1.3vw;
+}
+
+input[type="checkbox"]{
+    width: 3%;
+    height: 4%;
+    margin-top: 1%;
+    margin-right: 2%;
+    box-shadow: 0 0 2px;
+    cursor: pointer;
+    float: left;
+}
+
+label{
+    font-size: 0.9vw;
+    margin-top: 0;
+    color: #4b4b4b;
+    float: left;
+}
+
+form a{
+    font-size: 1vw;
+    float: right;
+    color:#367FFF;
+    cursor: pointer;
+}
+
+textarea{
+    width: 100%;
+    height: 40%;
+    font-size: 1.8vw;
+}
+
+input[type="submit"]{
+    background-color: #367FFF;
+    width: 60%;
+    height: 15%;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 12px;
+    font-size: 1.4vw;
+    color: #FFF;
+    cursor: pointer;
+}
+
+
+/* responsive*/
+
+
+@media screen and (max-width: 1450px) and (min-width:1351px){
+    nav .headRight{
+        width : 38%;
+    }
+    nav .headRight li{
+        font-size: 1.4rem;
+    }
+    .main{
+        width: 95%;
+        height: 79.2%;
+        flex-wrap:wrap;
+    }
+    .main .asideLeft .pFirst{  
+        width: 75%;
+        height: 14%;
+        font-size: 2.5rem;
+    }
+    .main .asideLeft .pSecond{ 
+        font-size: 8rem;
+    }
+    .main .asideLeft .pThree{
+        font-size: 8rem;
+    }
+    
+}
+
+
+@media  screen and (max-width: 1350px) and (min-width: 1101px){
+    nav .headRight{
+        width : 40%;
+    }
+    nav .headRight li{
+        font-size: 1.4rem;
+    }
+    .main{
+        width: 95%;
+        height: 79.2%;
+        flex-wrap:wrap;
+    }
+    .main .asideLeft .pFirst{ 
+        width: 75%; 
+        height: 11%;
+        font-size: 2rem;
+    }
+    .main .asideLeft .pSecond{ 
+        font-size: 6.5rem;
+    }
+    .main .asideLeft .pThree{
+        font-size: 6rem;
+    } 
+}
+
+
+
+@media screen and (max-width: 1100px) and (min-width:881px){
+    nav .headRight{
+        width : 40%;
+    }
+    nav .headRight li{
+        font-size: 1.4rem;
+    }
+    .main{
+        width: 95%;
+        height: 79.2%;
+        flex-wrap:wrap;
+    }
+    .main .asideLeft .pFirst{ 
+        width: 70%; 
+        height: 8%;
+        font-size: 1.5rem;
+    }
+    .main .asideLeft .pSecond{ 
+        font-size: 5.5rem;
+    }
+    .main .asideLeft .pThree{
+        font-size: 5rem;
+    } 
+}
+
+
+@media screen and (max-device-width: 880px) and (min-width: 778px) {
+    nav .headRight{
+        width : 40%;
+    }
+    nav .headRight li{
+        font-size: 1.4rem;
+    }
+    .main{
+        width: 95%;
+        height: 79.2%;
+        flex-wrap:wrap;
+    }
+    .main .asideLeft .pFirst{ 
+        width: 70%; 
+        height: 8%;
+        font-size: 1.5rem;
+    }
+    .main .asideLeft .pSecond{ 
+        font-size: 5.5rem;
+    }
+    .main .asideLeft .pThree{
+        font-size: 5rem;
+    } 
+}
+
+
+@media screen and (max-device-width: 550px) {
+    nav .headLeft{
+        width: 50%;
+        height: 100%;
+    }
+    nav .headRight{
+        width : 50%;
+    }
+    nav .headRight li{
+        font-size: 1.4rem;
+    }
+    .main{
+        width: 100%;
+        height: 80%;
+        flex-direction: column-reverse;
+        flex-wrap:nowrap;
+        margin-left: 0;
+    }
+    .main .asideLeft{
+        width: 100%;
+        height: 45%;
+    }
+    .main .asideLeft .pFirst{ 
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%; 
+        height: 15%;
+        font-size: 4.2rem;
+        text-align: center;
+    }
+    .main .asideLeft .pSecond{ 
+        height: 20%;
+        font-size: 5.5rem;
+        text-align: center;
+    }
+    .main .asideLeft .pThree{
+        height: 20%;
+        font-size: 5rem;
+        text-align: center;
+    } 
+
+    .main .asideLeft .btnCont{
+        width: 80%;
+        height: 20%;
+        margin: 1% 10%;
+        font-size: 4rem;
+    }
+
+    .main .asideRight{
+        margin-top: 5%;
+        width: 70%;
+        height: 40%;
+    }
+
+    .asideRight01 {
+        width: 85%;
+        height: 40%;
+        margin-top:0;
+    }
+
+    .asideColorBlack {
+        width: 70%;
+        height: 50%;
+    }
+
+    #returnView1 {
+        width: 18%;
+        height: 9%;
+        font-size: 3.2vw;
+    }
+
+    .letterBig {
+        font-size: 8vw;
+        line-height: 120%;
+    }
+
+    .letterMidle {
+        width: 95%;
+        font-size: 3vw;
+    }
+
+    .leftModal{
+        display: none;
+    }
+
+    .rightModal{
+        width: 70%;
+        height: 70%;
+    }
+
+    .rightModal p:nth-child(1) {
+        width: 70%;
+        height: 8%;
+        font-size: 5.5vw;
+        margin-top: -3%;
+    }
+
+    .rightModal button {
+        height: 5%;
+        font-size: 3vw;
+    }
+
+    .rightModal p {
+        font-size: 3vw;
+    }
+
+    .infCard p {
+        font-size: 5vw;
+        color: white;
+        margin: 20% 10% 0 10%;
+        padding: 15%;
+    }
+
+    input {
+        font-size: 5.5vw;
+        width: 98%;
+        height: 80%;
+    }
+
+    ::placeholder{
+        font-size: 5.5vw;
+    }
+
+    ::-moz-placeholder{
+        font-size: 5.5vw;
+    }
+
+    ::-webkit-input-placeholder{
+        font-size: 5.5vw;
+    }
+
+    input[type="checkbox"] {
+        width: 14%;
+        height: 9%;
+        margin-right: 5%;
+        margin-left: 12%;
+        float: left;
+    }
+
+    label {
+        font-size: 4vw;
+        margin-top: 3%;
+    }
+    textarea{
+        font-size: 4vw;
+    }
+
+    form a {
+        width: 100%;
+        height: 5%;
+        margin-top: 2%;
+        font-size: 4vw;
+        float: left;
+        text-align: center;
+    }
+
+    input[type="submit"] {
+        width: 90%;
+        height: 20%;
+        margin-left: 5%;
+        font-size: 6.4vw;
+    }
+}

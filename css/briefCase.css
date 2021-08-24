@@ -1,0 +1,282 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Little-letter : 1.4vw;
+    --medium-letter : 2vw;
+    --big-letter : 4.2vw;
+}
+
+.swal-modal {
+    background-color: rgba(255,255,255,1);
+    width: 30%;
+    height: 40%;
+    opacity: 1;
+    pointer-events: auto;
+    box-sizing: border-box;
+    -webkit-animation: showSweetAlert .3s;
+    animation: showSweetAlert .3s;
+    will-change: transform;
+}
+
+.swal-overlay--show-modal{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.swal-icon--success__ring {
+    background-image: url('../img/faviconSVG.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+    border: 4px solid #367FFF;
+    border-radius: 50%;
+    box-sizing: content-box;
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    z-index: 2;
+}
+
+.swal-text:first-child {
+    width: 90%;
+    margin-left: 5%;
+    background-color: #FFF;
+    font-family: Myriad;
+    margin-top: 45px;
+    color: #4b4b4b;
+    font-size: 2.4vw;
+    text-align: center;
+    border: none;   
+}
+
+.swal-button {
+    width: 100%;
+    height: 15%;
+    background-color: #FFF;
+    color: #FFF;
+    border: none;
+    box-shadow: none;
+    border-radius: 5px;
+    border: 2px solid #4b4b4b;
+    font-weight: 600;
+    font-size: 1.6vw;
+    font-family: Myriad;
+    padding: 0px 20px;
+    margin: 0;
+    cursor: pointer;
+}
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    background-image: url('../img/fondoPortafolio.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.data{
+    background-color: transparent;
+    width: 43%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    float: left;
+}
+
+a{
+    background-image: url('../img/fabiconMin.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10%;
+    height: 8%;
+    cursor: pointer;
+    float: left;
+    text-decoration: none;
+    color: #FFF;
+    align-self: flex-start;
+    margin-left: 5%;
+}
+p{
+    color: #FFF;
+}
+#up{
+    background-image: url('../img/btnUp.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10%;
+    height: 5%;
+    margin-right: 2%;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-left: 5%;
+}
+.titOne{
+    width: 75%;
+    margin-left: 8%;
+    font-size: var(--big-letter);
+    font-weight: bold;
+    line-height: 100%;
+    align-self: flex-start;
+}
+
+.titTwo{
+    font-size: var(--big-letter);
+    font-weight: bold;
+    line-height: 100%;
+    align-self: flex-start;
+    margin-left: 12%;
+}
+
+.textPro{
+    width: 80%;
+    height: 25%;
+    margin-left: 5%;
+    font-size: var(--Little-letter);
+    font-weight: 300;
+    align-self: flex-start;
+}
+
+.tecnologic{
+    font-size: var(--medium-letter);
+    margin-left: 5%;
+    height: 10%;
+    align-self: flex-start;
+}
+
+.pEnd{
+    background-image: url('../img/btnDown.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 5%;
+    width: 10%;
+    height: 5%;
+    cursor: pointer;
+    align-self:flex-start;
+}
+
+
+button{
+    background-color: transparent;
+    width: 25%;
+    height: 7%;
+    margin-left: 5%;
+    align-self: flex-start;
+    border: 2px solid #FFF;
+    border-radius: 12px;
+    color: #FFF;
+    font-size: var(--medium-letter);
+    float: left;
+}
+
+
+.image{
+    background-image: url('../img/visionesIntegradas.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    width: 57%;
+    height: 100%;
+    overflow: scroll;
+    float: left;
+}
+
+img{
+    width: 100%;
+}
+
+
+@media screen and (max-device-width : 550px){
+    body{
+        width: 100vw;
+        height: 200vh;
+    }
+    :root{
+        --Little-letter : 3.5vw;
+        --medium-letter : 5vw;
+        --big-letter : 8vw;
+    }
+
+    .swal-modal {
+        width: 80%;
+        height: 25%;
+    }
+
+    .swal-title {
+        width: 90%;
+        color: #4b4b4b;
+        font-size: 6vw; 
+    }
+
+    .swal-footer{
+        text-align: center;
+    }
+
+    .swal-button {
+        background-color: #367FFF;
+        width: 200px;
+        height: 15%;
+        font-size: 4.2vw;
+    }
+
+    a{
+        width: 15%;
+        height: 12%;
+        margin-right: 2%;
+    }
+    .container{
+        background-image: url('../img/fondoPortafoliResponsive.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #367FFF;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .data{
+        background-color: transparent;
+        width: 90%;
+        height: 100%;
+        float: left;
+    }
+
+    .textPro {
+        width: 90%;
+        height: 30%;
+        font-weight: 600;
+        margin-top: 3%;
+        text-align: justify;
+    }
+
+    .image{
+        background-image: url('../img/visionesIntegradas.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        margin-top: 5%;
+        width: 85%;
+        height: 100%;
+        overflow: scroll;
+        float: left;
+    }
+
+}
